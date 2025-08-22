@@ -1,0 +1,18 @@
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+*{box-sizing: border-box;}
+html, body, h1, h2, h3, h4, p, 
+ul, li, ol, dl, dt, dd, blockquote, q, video, img,
+table, tr, td, thead, tfoot, tbody,
+form, fieldset, legend, input, textarea, button, select, option, label,
+div, section, article, header, nav, main, aside, footer, address,
+figure, figcaption, sup, sub, em, strong, span, i, del, s, a, code, mark{
+    margin: 0; padding: 0; line-height: 1.0; 
+    font-size: 1.0em; font-weight: 400; font-style: normal;
+    font-family: "pretendard", sans-serif;
+    list-style: none;
+}
+a{text-decoration: none;}
+table, tr, td, th{border-collapse: collapse;}
+button{cursor: pointer;}
