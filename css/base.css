@@ -13,6 +13,6 @@ figure, figcaption, sup, sub, em, strong, span, i, del, s, a, code, mark{
     font-family: "pretendard", sans-serif;
     list-style: none;
 }
-a{text-decoration: none;}
+a{text-decoration: none; color: inherit;}
 table, tr, td, th{border-collapse: collapse;}
 button{cursor: pointer;}

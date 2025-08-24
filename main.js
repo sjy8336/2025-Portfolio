@@ -1,8 +1,13 @@
-var my = new fullpage('#wrap'/* , {
-    navigation: true,
-    responsiveWidth: 700,
-    anchors: ['home', 'profile', 'project', 'design', 'contact'],
-    parallax: true,
-    onLeave: function(origin, destination, direction){
-        console.log("Leaving section " + origin.index);
-}} */);
+const ports = new Swiper(".main",{
+    direction:'vertical',
+    mousewheel:true,
+    speed:700,
+});
+const nav = document.querySelectorAll ('nav a');
+for(let i of nav){
+    i.addEventListener('click', function(e){
+        e.preventDefault()
+        const slideIndex = this.getAttribute('data-slide')
+        ports.slideTo(slideIndex)
+    })
+};
