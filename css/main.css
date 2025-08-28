@@ -66,9 +66,9 @@ body, html{scroll-behavior: smooth; background-color: #F9F7F7;}
     font-family: 'noto serif'; color: #112D4E;
     font-size: 1.50rem; letter-spacing: -0.01em;
 }
-#profile {max-width: 1400px; margin: 0 auto; position: relative;}
 #profile .prof_in {
-    width: 100%; height: 100%;
+    max-width: 1400px; height: 100%;
+    margin: 0 auto;
     display: flex; align-items: center; justify-content: center;
 }
 #profile .prof_in .prof_img .photo {
@@ -115,3 +115,46 @@ body, html{scroll-behavior: smooth; background-color: #F9F7F7;}
 #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li {margin: 0 20px 20px 0;}
 #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(5), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(10) {margin-right: 0;}
 #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(6), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(7), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(8), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(9), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(10) {margin-bottom: 0;}
+#project .webs {max-width: 1400px; height: 100%; margin: 0 auto;}
+#project .webs .web > div {width: 100%; display: flex; align-items: center; justify-content: center;}
+#project .webs .web > div .web_img {width: 720px; height: auto; overflow: hidden; margin: 0 60px 0 0;}
+#project .webs .web > div .web_img > img {width: 100%;}
+#project .webs .web > div .web_txt {color: #112D4E;}
+#project .webs .web > div .web_txt > h2 {
+    font-family: 'noto serif';
+    font-size: 4rem; font-weight: 700;
+}
+#project .webs .web > div .web_txt .purpose {
+    font-size: 0.88rem; 
+    margin: 40px 0 60px 0; 
+    line-height: 140%;
+    font-weight: 300;
+}
+#project .webs .web > div .web_txt .work_detail {display: flex;}
+#project .webs .web > div .web_txt .work_detail .sub_tit {margin: 0 16px 60px 0;}
+#project .webs .web > div .web_txt .work_detail .sub_tit > h3 {font-weight: 500; margin: 0 0 24px;}
+#project .webs .web > div .web_txt .work_detail .sub_tit > h3:last-child {margin: 0;}
+#project .webs .web > div .web_txt .work_detail .text > p {margin: 0 0 24px;}
+#project .webs .web > div .web_txt .work_detail .text > p:last-child {margin: 0;}
+#project .webs .web > div .web_txt .btn {display: flex;}
+#project .webs .web > div .web_txt .btn > li {margin: 0 16px 0 0;}
+#project .webs .web > div .web_txt .btn > li:last-child {margin: 0;}
+#project .webs .web > div .web_txt .btn > li > a {
+    display: block;
+    width: 124px; height: 39px;
+    border: 1px solid #9CB5D3;
+    border-radius: 8px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 39px;
+    color: #3F72AF;
+    transition: all 0.3s;
+}
+#project .webs .web > div .web_txt .btn > li > a.on {
+    background-color: #3F72AF;
+    color: #F9F7F7;
+}
+#project .webs .web > div .web_txt .btn > li:hover > a {
+    background-color: #9CB5D3;
+    color: #F9F7F7;
+}
