@@ -36,9 +36,9 @@ body, html{scroll-behavior: smooth; background-color: #F9F7F7;}
 }
 .tab a:hover::after {width: 100%;}
 .tab a.on {border-bottom: 1px solid #3F72AF; color: #3F72AF;}
-.main {height: 100vh;}
+.main {max-width: 1600px; margin: 0 auto; height: 100vh;}
 .box {width: 100%; height: 960px;}
-#home .home_in {width: 100%; height: 100%; margin: 0 auto; position: relative;}
+#home .home_in {width: 100%; height: 100%; position: relative;}
 #home .home_in .home_txt {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 #home .home_in .home_txt > p {
     font-family: 'noto serif';
@@ -50,27 +50,26 @@ body, html{scroll-behavior: smooth; background-color: #F9F7F7;}
     font-size: 5rem; font-weight: 600; color: #112D4E;
     text-align: center;
 }
-#home .home_in .bottomline {
+.bottomline {
     width: 100%; height: 75px;
     display: flex; align-items: center; justify-content: center;
     position: absolute; bottom: 0; left: 50%; 
     transform: translateX(-50%);
 }
-#home .home_in .bottomline .btmline {
+.bottomline .btmline {
     width: 100%; height: 1px; background-color: #112D4E;
     font-size: 0;
     margin:0 40px 0 0;
 }
-#home .home_in .bottomline > div:last-child {margin: 0 0 0 40px;}
-#home .home_in .bottomline p {
+.bottomline > div:last-child {margin: 0 0 0 40px;}
+.bottomline p {
     font-family: 'noto serif'; color: #112D4E;
     font-size: 1.50rem; letter-spacing: -0.01em;
 }
-#profile {position: relative;}
+#profile {max-width: 1400px; margin: 0 auto; position: relative;}
 #profile .prof_in {
-    display: flex; align-items: center;/*  justify-content: center; */
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    background-color: antiquewhite;
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
 }
 #profile .prof_in .prof_img .photo {
     width: 360px; height: 440px; 
@@ -89,18 +88,30 @@ body, html{scroll-behavior: smooth; background-color: #F9F7F7;}
 #profile .prof_in .prof_img > p > span:first-child {margin: 0 4px 0 0;}
 #profile .prof_in .prof_txt {display: flex;}
 #profile .prof_in .prof_txt > div {margin: 0 0 0 100px;}
-#profile .prof_in .prof_txt .prof_left {}
-#profile .prof_in .prof_txt .prof_left .about {}
-#profile .prof_in .prof_txt .prof_left .about > h2 {
+#profile .prof_in .prof_txt > div > div > h2 {
     font-family: 'noto serif';
     font-size: 1.13rem; font-weight: 600; color: #112D4E;
     margin-bottom: 24px; letter-spacing: -0.01em;
 }
-#profile .prof_in .prof_txt .prof_left .about .about_txt {display: flex;}
-#profile .prof_in .prof_txt .prof_left .about .about_txt .about_left {}
-#profile .prof_in .prof_txt .prof_left .about .about_txt .about_left .sub_tit {display: flex;}
-#profile .prof_in .prof_txt .prof_left .about .about_txt .about_left .sub_tit > h3 {
+#profile .prof_in .prof_txt > div .sub_tit {display: flex;}
+#profile .prof_in .prof_txt > div .sub_tit > h3 {
     font-family: 'noto serif'; font-weight: 500; color: #112D4E;
     margin: 0 10px 0 0;
 }
-#profile .prof_in .prof_txt .prof_left .about .about_txt .about_left .sub_tit > p {}
+#profile .prof_in .prof_txt > div .sub_tit p {color: #112D4E;}
+#profile .prof_in .prof_txt .prof_left .about {margin: 0 0 100px;}
+#profile .prof_in .prof_txt .prof_left .about .about_txt {display: flex;}
+#profile .prof_in .prof_txt .prof_left .about .about_txt .about_left {margin: 0 40px 0 0;}
+#profile .prof_in .prof_txt .prof_left .about .about_txt > div > div:first-child {margin: 0 0 16px;}
+#profile .prof_in .prof_txt .prof_left .edu > div {margin: 0 0 16px;}
+#profile .prof_in .prof_txt .prof_right .license > div {margin: 0 0 16px;}
+#profile .prof_in .prof_txt .prof_right .license > div:last-child {margin: 0;}
+#profile .prof_in .prof_txt .prof_right .skill {margin: 67px 0 0;}
+#profile .prof_in .prof_txt .prof_right .skill .sk_ic {
+    width: 230px; 
+    display: flex;
+    flex-flow: wrap;
+}
+#profile .prof_in .prof_txt .prof_right .skill .sk_ic > li {margin: 0 20px 20px 0;}
+#profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(5), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(10) {margin-right: 0;}
+#profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(6), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(7), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(8), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(9), #profile .prof_in .prof_txt .prof_right .skill .sk_ic > li:nth-child(10) {margin-bottom: 0;}
