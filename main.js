@@ -1,15 +1,18 @@
-/* const tab = document.querySelector('.tab a');
-tab.addEventListener('click',()=>{
-    e.preventDefault()
-    tab.classList.remove('on')    
-    tab.classList.add('on')    
-}) */
+const nav = document.querySelectorAll('nav a');
 const ports = new Swiper(".main",{
     direction:'vertical',
     mousewheel:true,
-    speed:700,
+    speed:600,
+    on: {
+        slideChangeTransitionEnd: function(){
+            for(let i of nav) i.classList.remove('on')
+            nav[this.activeIndex].classList.add('on')
+            setTimeout(()=>{
+                ScrollTrigger.refresh();
+            },0);
+        },
+    },
 });
-const nav = document.querySelectorAll ('nav a');
 for(let i of nav){
     i.addEventListener('click', function(e){
         e.preventDefault()
@@ -21,10 +24,30 @@ const webS = new Swiper('.webs', {
     loop: true,
     autoplay:{delay:6000},
 });
+
+
+
+
+
+
+
+
+const snsSlide = new Swiper('.snsD',{
+    autoplay:{delay:0},
+    loop:true,
+    speed:3500,
+    /* loopAdditionalSlides: 3, // 추가 슬라이드 복제 → 마지막 슬라이드에서 멈칫하는 현상 방지 */
+});
+const bnrSlide = new Swiper('.bannerD',{
+    autoplay:{delay:0},
+    loop:true,
+    speed:3500,
+});
+
 const navi = document.querySelector ('.tab');
-const bigD = document.querySelector('.pj03_in .big_bg');
+const bigD = document.querySelector('.detailD .big_bg');
 const detail_img = document.querySelectorAll('.detail li img');
-const big_imgD = document.querySelector('.pj03_in .big_bg img');
+const big_imgD = document.querySelector('.detailD .big_bg img');
 const body = document.querySelectorAll('body');
 bigD.style.display = 'none';
 for(let detail of detail_img){//6개 이미지 반복문 접근
@@ -50,25 +73,9 @@ bigD.addEventListener('click',()=>{
     ports.enable()
     navi.style.zIndex = '100'
 })
-function PlayRollingSwiper(target){
-    rollingSwiper = new Swiper('.snsS', {
-    spaceBetween: 0,
-    centeredSlides: true,
-    speed: 12000,
-    autoplay: {
-        delay: 1,
-    },
-    loop: true,
-    slidesPerView: 'auto'
-    });
-}
-window.addEventListener('load', function(){
-    PlayRollingSwiper();
-});
-/*  */
-const bigS = document.querySelector('.pj02_in .big_bg');
+const bigS = document.querySelector('.snsD .big_bg');
 const ban_img = document.querySelectorAll('.sns li img');
-const big_imgS = document.querySelector('.pj02_in .big_bg img');
+const big_imgS = document.querySelector('.snsD .big_bg img');
 bigS.style.display = 'none';
 for(let sns of ban_img){
     sns.addEventListener('click',(e)=>{
@@ -87,9 +94,9 @@ bigS.addEventListener('click',()=>{
     ports.enable()
     navi.style.zIndex = '100'
 })
-const bigb = document.querySelector('.pj04_in .big_bg');
+const bigb = document.querySelector('.bannerD .big_bg');
 const banner_img = document.querySelectorAll('.banner li img');
-const big_imgB = document.querySelector('.pj04_in .big_bg img');
+const big_imgB = document.querySelector('.bannerD .big_bg img');
 bigb.style.display = 'none';
 for(let banner of banner_img){
     banner.addEventListener('click',(e)=>{
@@ -102,3 +109,9 @@ for(let banner of banner_img){
         bigb.children[0].scrollTo(0,0)
     })
 }
+bigb.addEventListener('click',()=>{
+    bigb.style.display = 'none'
+    document.body.style.overflow = '';
+    ports.enable()
+    navi.style.zIndex = '100'
+})
