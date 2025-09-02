@@ -64,8 +64,7 @@ body, html{scroll-behavior: smooth; background-color: #F9F7F7;}
 }
 .bottomline > div:last-child {margin: 0 0 0 40px;}
 .bottomline p {
-    font-family: 'noto serif'; color: #112D4E;
-    font-size: 1.50rem; letter-spacing: -0.01em;
+    font-family: 'noto serif'; color: #112D4E; letter-spacing: -0.01em;
 }
 #profile .prof_in {
     max-width: 1400px; height: 100%;
@@ -134,9 +133,9 @@ body, html{scroll-behavior: smooth; background-color: #F9F7F7;}
 }
 #project .webs .web > div .web_txt .work_detail {display: flex;}
 #project .webs .web > div .web_txt .work_detail .sub_tit {margin: 0 16px 60px 0;}
-#project .webs .web > div .web_txt .work_detail .sub_tit > h3 {font-weight: 500; margin: 0 0 24px;}
+#project .webs .web > div .web_txt .work_detail .sub_tit > h3 {font-weight: 500; margin: 0 0 16px;}
 #project .webs .web > div .web_txt .work_detail .sub_tit > h3:last-child {margin: 0;}
-#project .webs .web > div .web_txt .work_detail .text > p {margin: 0 0 24px;}
+#project .webs .web > div .web_txt .work_detail .text > p {margin: 0 0 16px; font-weight: 300;}
 #project .webs .web > div .web_txt .work_detail .text > p:last-child {margin: 0;}
 #project .webs .web > div .web_txt .btn {display: flex;}
 #project .webs .web > div .web_txt .btn > li {margin: 0 16px 0 0;}
@@ -162,32 +161,74 @@ body, html{scroll-behavior: smooth; background-color: #F9F7F7;}
     display: flex;
     align-items: center;
     justify-self: center;
-    background-color: antiquewhite;
 }
 #design .Dcontents .design_left .swiper-wrapper {transition-timing-function: linear;}
-#design .Dcontents .design_left .snsD {width: 940px; height: 240px; overflow: hidden;}
+#design .Dcontents .design_left .snsD {width: 900px; height: 240px; overflow: hidden;}
 #design .Dcontents .design_left .snsD .sns > li {
     width: 240px; height: 240px; 
     overflow: hidden;
     border-radius: 8px;
+    cursor: pointer;
+    background-color: #000000;
 }
-#design .Dcontents .design_left .snsD .sns > li > img {height: 100%; width: 100%;}
-#design .Dcontents .design_left .bnrD {width: 940px; height: 140px; overflow: hidden; margin: 20px 0 0;}
+#design .Dcontents .design_left .snsD .sns > li > img {height: 100%; width: 100%;transition: all 0.4s;}
+#design .Dcontents .design_left .snsD .sns > li:hover > img {opacity: 0.6;}
+#design .Dcontents .design_left .bnrD {width: 900px; height: 140px; overflow: hidden; margin: 20px 0 0;}
 #design .Dcontents .design_left .bnrD .bnr > li {
     width: auto;
     height: 140px; 
     overflow: hidden;
     border-radius: 8px;
+    cursor: pointer;
+    background-color: #000000;
 }
-#design .Dcontents .design_left .bnrD .bnr > li > img {height: 100%;}
-#design .Dcontents .detailD {
-    width: 280px; height: 400px; 
+#design .Dcontents .design_left .bnrD .bnr > li > img {height: 100%; transition: all 0.4s;}
+#design .Dcontents .design_left .bnrD .bnr > li:hover > img {opacity: 0.6;}
+#design .Dcontents .design_right {width: 280px; margin: 0 0 0 20px;}
+#design .Dcontents .design_right .detailD {
+    width: 100%; height: 400px; 
     overflow: hidden; 
-    margin: 0 0 0 20px; 
     border-radius: 8px;
 }
-#design .Dcontents .detailD .detail > li > img {width: 100%;}
+#design .Dcontents .design_right .detailD .detail > li {cursor: pointer; background-color: #000000;}
+#design .Dcontents .design_right .detailD .detail > li > img {width: 100%; transition: all 0.4s;}
+#design .Dcontents .design_right .detailD .detail > li:hover > img {opacity: 0.6;}
+#design .Dcontents .design_right .event-scrollbar {width:100%; height:2px; background: #9CB5D3; position:relative; margin-top: 16px;}
+#design .Dcontents .design_right .event-scrollbar .active-scrollbar {background:#112D4E; width:100%; height:100%; position:absolute;}
 #design .Dcontents .popup_bg {
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(0,0,0,0.6);
     position:fixed; left:0; top:0; width:100%; height:100vh; z-index:999;
 }
+#design .Dcontents .popup_bg .popup {
+    max-width: 40vw; margin: 0 auto; height:85vh; overflow-y: auto; overflow-x: hidden;
+}
+#design .Dcontents .popup_bg .popup::-webkit-scrollbar {background-color: #605C64; width: 6px; height: 10px;}
+#design .Dcontents .popup_bg .popup::-webkit-scrollbar-thumb {background-color: #A6A2AB;}
+#design .Dcontents .popup_bg .popup > img {width: 100%;}
+#contact .cont_in {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact .cont_in .qr {width: 174px; height: 174px; margin: 0 40px 0 0;}
+#contact .cont_in .qr > img {width: 100%;}
+#contact .cont_in .cont_txt > h2 {
+    font-family: 'noto serif';
+    font-size: 3.00rem;
+    color: #112D4E;
+    font-weight: 600;
+}
+#contact .cont_in .cont_txt > h3 {
+    font-size: 1.25rem;
+    color: #112D4E;
+    margin: 38px 0 20px;
+}
+#contact .cont_in .cont_txt .info {display: flex;}
+#contact .cont_in .cont_txt .info .sub_tit {margin: 0 8px 0 0;}
+#contact .cont_in .cont_txt .info .sub_tit > p {color: #3F72AF; font-family: 'noto serif';}
+#contact .cont_in .cont_txt .info .sub_tit > p:first-child {margin: 0 0 8px;}
+#contact .cont_in .cont_txt .info .text > p {color: #000000; font-weight: 300;}
+#contact .cont_in .cont_txt .info .text > p:first-child {margin: 0 0 8px;}
